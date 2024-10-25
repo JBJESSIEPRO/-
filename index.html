@@ -4,21 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="p2.css">
-    <title>Pacman Button Control</title>
+    <title>Pac-Boi</title>
 </head>
-<body>
+<body ontouchstart="touchStart(event)"
+      ontouchmove="touchMove(event)"
+      ontouchend="touchEnd()">
     <div id="gameArea">
-        <div id="pacman"></div>
-        <div id="ghost">1</div>
+        <div id="pacman">pacboi</div>
+        <div id="ghost">alien</div>
     </div>
     <div class="controls">
-        <button id="up">Up</button>
-        <div>
-            <button id="left">Left</button>
-        <button id="down">Down</button>
-        </div>
-        <button id="right">Right</button>
+        <button id="up">↑</button>
     </div>
+    <div>
+        <button id="left">←</button>
+        <button id="down">↓</button>
+        <button id="right">→</button>
+    </div>
+    <div id="gameOver" style="display:none;">Game Over! <button onclick="restartGame()">Restart</button></div>
+    
     <script src="p2.js"></script>
+    
 </body>
 </html>
